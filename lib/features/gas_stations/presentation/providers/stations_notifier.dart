@@ -6,8 +6,8 @@ import '../state/stations_ui_state.dart';
 
 part 'stations_notifier.g.dart';
 
-// autoDispose para liberar recursos cuando la pantalla del mapa no está activa.
-@riverpod
+// keepAlive: true porque el mapa, la lista y favoritos comparten estas estaciones.
+@Riverpod(keepAlive: true)
 class StationsNotifier extends _$StationsNotifier {
   @override
   StationsUiState build() {

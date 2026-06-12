@@ -24,6 +24,12 @@ dependencies:
   connectivity_plus: ^6.0.3
   geolocator: ^11.0.0
   dartz: ^0.10.1
+  # Animaciones declarativas — sintaxis encadenable tipo .animate().fadeIn().slideY()
+  flutter_animate: ^4.5.0
+  # Loading shimmer effect
+  shimmer: ^3.0.0
+  # Material motion transitions (OpenContainer, SharedAxisTransition, etc.)
+  animations: ^2.0.11
 
 dev_dependencies:
   flutter_test:
