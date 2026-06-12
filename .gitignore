@@ -1,0 +1,38 @@
+# Flutter / Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Archivos generados por build_runner — se regeneran con `build_runner build`
+*.g.dart
+*.freezed.dart
+*.mocks.dart
+
+# Credenciales y env
+.env
+*.keystore
+google-services.json
+GoogleService-Info.plist
+
+# macOS / iOS
+*.DS_Store
+ios/Flutter/flutter_export_environment.sh
+ios/Flutter/Generated.xcconfig
+
+# Android
+android/local.properties
+android/key.properties
+
+# VS Code
+.vscode/
+
+# IntelliJ / Android Studio
+*.iml
