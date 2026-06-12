@@ -1,9 +1,11 @@
-import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../features/auth/presentation/screens/login_screen.dart';
 import '../../features/auth/presentation/screens/register_screen.dart';
+import '../../features/favorites/presentation/screens/favorites_screen.dart';
+import '../../features/gas_stations/presentation/screens/map_screen.dart';
+import '../../features/gas_stations/presentation/screens/stations_list_screen.dart';
 import '../../features/onboarding/presentation/screens/onboarding_screen.dart';
 import '../../features/splash/presentation/screens/splash_screen.dart';
 import '../storage/secure_storage_impl.dart';
@@ -17,7 +19,7 @@ GoRouter appRouter(AppRouterRef ref) {
 
   return GoRouter(
     initialLocation: '/',
-    redirect: (BuildContext context, GoRouterState state) async {
+    redirect: (context, state) async {
       final path = state.matchedLocation;
 
       // Splash y onboarding nunca redirigen.
@@ -37,37 +39,38 @@ GoRouter appRouter(AppRouterRef ref) {
         path: '/onboarding',
         builder: (_, __) => const OnboardingScreen(),
       ),
-      GoRoute(
-        path: '/login',
-        builder: (_, __) => const LoginScreen(),
-      ),
-      GoRoute(
-        path: '/register',
-        builder: (_, __) => const RegisterScreen(),
-      ),
-      // Shell de home con 3 tabs: mapa, lista, favoritos.
-      ShellRoute(
-        builder: (context, state, child) {
-          final tab = switch (state.matchedLocation) {
-            '/home/map' => 0,
-            '/home/list' => 1,
-            '/home/favorites' => 2,
-            _ => 0,
-          };
-          return HomeScaffold(tab: tab);
-        },
-        routes: [
-          GoRoute(
-            path: '/home/map',
-            builder: (_, __) => const SizedBox.shrink(),
+      GoRoute(path: '/login', builder: (_, __) => const LoginScreen()),
+      GoRoute(path: '/register', builder: (_, __) => const RegisterScreen()),
+
+      // StatefulShellRoute mantiene el estado de cada tab al cambiar.
+      // IndexedStack preserva el árbol de widgets de cada branch.
+      StatefulShellRoute.indexedStack(
+        builder: (context, state, navigationShell) =>
+            HomeScaffold(navigationShell: navigationShell),
+        branches: [
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: '/home/map',
+                builder: (_, __) => const MapScreen(),
+              ),
+            ],
           ),
-          GoRoute(
-            path: '/home/list',
-            builder: (_, __) => const SizedBox.shrink(),
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: '/home/list',
+                builder: (_, __) => const StationsListScreen(),
+              ),
+            ],
           ),
-          GoRoute(
-            path: '/home/favorites',
-            builder: (_, __) => const SizedBox.shrink(),
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: '/home/favorites',
+                builder: (_, __) => const FavoritesScreen(),
+              ),
+            ],
           ),
         ],
       ),

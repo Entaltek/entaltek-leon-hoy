@@ -5,6 +5,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../../core/storage/app_preferences.dart';
 import '../../../../core/storage/secure_storage_impl.dart';
 import '../../../../core/theme/app_theme.dart';
 
@@ -31,27 +32,23 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
   }
 
   Future<void> _navigate() async {
+    // Espera mínima para que la animación sea visible.
     await Future.delayed(const Duration(milliseconds: 2400));
     if (!mounted) return;
 
-    final token = await ref.read(secureStorageProvider).getAccessToken();
-    final hasSeenOnboarding = await _hasSeenOnboarding();
+    final prefs = ref.read(appPreferencesProvider);
+    final hasSeenOnboarding = await prefs.hasSeenOnboarding();
 
     if (!mounted) return;
+
     if (!hasSeenOnboarding) {
       context.go('/onboarding');
-    } else if (token != null) {
-      context.go('/home/map');
-    } else {
-      context.go('/login');
+      return;
     }
-  }
 
-  Future<bool> _hasSeenOnboarding() async {
-    // Usamos SecureStorage como proxy; en producción se migra a SharedPreferences.
-    final flag = await ref.read(secureStorageProvider).getAccessToken();
-    // Siempre muestra onboarding si no hay sesión activa en el primer run.
-    return flag != null;
+    final token = await ref.read(secureStorageProvider).getAccessToken();
+    if (!mounted) return;
+    context.go(token != null ? '/home/map' : '/login');
   }
 
   @override
@@ -67,19 +64,17 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
       body: Stack(
         fit: StackFit.expand,
         children: [
-          // Anillos expansivos animados (CustomPainter).
+          // Anillos expansivos animados con CustomPainter.
           AnimatedBuilder(
             animation: _ringsController,
             builder: (context, _) => CustomPaint(
               painter: _RingsPainter(progress: _ringsController.value),
             ),
           ),
-          // Logo y texto centrados.
           Center(
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                // Ícono con escala spring.
                 Container(
                   width: 96,
                   height: 96,
@@ -150,7 +145,6 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
               ],
             ),
           ),
-          // Indicador de carga en la parte inferior.
           Positioned(
             bottom: 60,
             left: 0,
@@ -163,9 +157,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
                   color: AppColors.accent,
                   borderRadius: BorderRadius.circular(4),
                 ),
-              )
-                  .animate()
-                  .fadeIn(delay: 1200.ms, duration: 400.ms),
+              ).animate().fadeIn(delay: 1200.ms, duration: 400.ms),
             ),
           ),
         ],
@@ -174,7 +166,6 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
   }
 }
 
-/// Pinta anillos concéntricos que se expanden y desvanecen desde el centro.
 class _RingsPainter extends CustomPainter {
   _RingsPainter({required this.progress});
 
@@ -183,28 +174,28 @@ class _RingsPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final center = Offset(size.width / 2, size.height / 2);
-    final maxRadius = math.sqrt(size.width * size.width + size.height * size.height);
+    final maxRadius =
+        math.sqrt(size.width * size.width + size.height * size.height);
 
     const ringCount = 4;
     for (int i = 0; i < ringCount; i++) {
-      // Cada anillo tiene un offset de fase diferente.
       final phase = i / ringCount;
       final t = ((progress - phase) % 1.0).clamp(0.0, 1.0);
       final radius = t * maxRadius * 0.9;
       final opacity = (1.0 - t) * 0.15;
-
       if (opacity <= 0) continue;
 
-      final paint = Paint()
-        ..color = AppColors.accent.withOpacity(opacity)
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = 1.5;
-
-      canvas.drawCircle(center, radius, paint);
+      canvas.drawCircle(
+        center,
+        radius,
+        Paint()
+          ..color = AppColors.accent.withOpacity(opacity)
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 1.5,
+      );
     }
   }
 
   @override
-  bool shouldRepaint(_RingsPainter oldDelegate) =>
-      oldDelegate.progress != progress;
+  bool shouldRepaint(_RingsPainter old) => old.progress != progress;
 }

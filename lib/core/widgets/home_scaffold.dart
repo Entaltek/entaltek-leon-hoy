@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../features/favorites/presentation/screens/favorites_screen.dart';
-import '../../features/gas_stations/presentation/screens/map_screen.dart';
-import '../../features/gas_stations/presentation/screens/stations_list_screen.dart';
 import 'animated_bottom_nav_bar.dart';
 import 'connectivity_banner.dart';
 
@@ -26,58 +23,31 @@ const _tabs = [
   ),
 ];
 
-class HomeScaffold extends ConsumerStatefulWidget {
-  const HomeScaffold({super.key, required this.tab});
+/// Scaffold principal de home con bottom nav animado y banner de conectividad.
+///
+/// Recibe [navigationShell] de [StatefulShellRoute.indexedStack] para que
+/// GoRouter gestione el IndexedStack y preserve el estado de cada branch.
+class HomeScaffold extends ConsumerWidget {
+  const HomeScaffold({super.key, required this.navigationShell});
 
-  final int tab;
-
-  @override
-  ConsumerState<HomeScaffold> createState() => _HomeScaffoldState();
-}
-
-class _HomeScaffoldState extends ConsumerState<HomeScaffold> {
-  late int _currentTab;
-
-  static const _screens = [
-    MapScreen(),
-    StationsListScreen(),
-    FavoritesScreen(),
-  ];
-
-  static const _routes = ['/home/map', '/home/list', '/home/favorites'];
+  final StatefulNavigationShell navigationShell;
 
   @override
-  void initState() {
-    super.initState();
-    _currentTab = widget.tab;
-  }
-
-  @override
-  void didUpdateWidget(HomeScaffold oldWidget) {
-    super.didUpdateWidget(oldWidget);
-    if (oldWidget.tab != widget.tab) {
-      setState(() => _currentTab = widget.tab);
-    }
-  }
-
-  void _onTabSelected(int index) {
-    if (index == _currentTab) return;
-    context.go(_routes[index]);
-  }
-
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       body: ConnectivityBanner(
-        child: IndexedStack(
-          index: _currentTab,
-          children: _screens,
-        ),
+        // navigationShell es el IndexedStack gestionado por GoRouter.
+        child: navigationShell,
       ),
       bottomNavigationBar: AnimatedBottomNavBar(
         items: _tabs,
-        currentIndex: _currentTab,
-        onTap: _onTabSelected,
+        currentIndex: navigationShell.currentIndex,
+        onTap: (index) => navigationShell.goBranch(
+          index,
+          // initialLocation: true restaura la ubicación inicial del branch
+          // cuando el usuario vuelve a un tab ya visitado.
+          initialLocation: index == navigationShell.currentIndex,
+        ),
       ),
     );
   }

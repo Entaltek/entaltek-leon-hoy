@@ -2,8 +2,10 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../../core/storage/app_preferences.dart';
 import '../../../../core/theme/app_theme.dart';
 
 class _OnboardingData {
@@ -24,14 +26,14 @@ class _OnboardingData {
   final CustomPainter painter;
 }
 
-class OnboardingScreen extends StatefulWidget {
+class OnboardingScreen extends ConsumerStatefulWidget {
   const OnboardingScreen({super.key});
 
   @override
-  State<OnboardingScreen> createState() => _OnboardingScreenState();
+  ConsumerState<OnboardingScreen> createState() => _OnboardingScreenState();
 }
 
-class _OnboardingScreenState extends State<OnboardingScreen>
+class _OnboardingScreenState extends ConsumerState<OnboardingScreen>
     with TickerProviderStateMixin {
   final _pageController = PageController();
   int _currentPage = 0;
@@ -86,6 +88,11 @@ class _OnboardingScreenState extends State<OnboardingScreen>
     super.dispose();
   }
 
+  Future<void> _markAndNavigate() async {
+    await ref.read(appPreferencesProvider).markOnboardingSeen();
+    if (mounted) context.go('/login');
+  }
+
   void _next() {
     if (_currentPage < _pages.length - 1) {
       _pageController.nextPage(
@@ -93,11 +100,11 @@ class _OnboardingScreenState extends State<OnboardingScreen>
         curve: Curves.easeInOutCubic,
       );
     } else {
-      context.go('/login');
+      _markAndNavigate();
     }
   }
 
-  void _skip() => context.go('/login');
+  void _skip() => _markAndNavigate();
 
   @override
   Widget build(BuildContext context) {

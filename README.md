@@ -8,12 +8,13 @@ App de utilidad para León, Guanajuato que muestra gasolineras en tiempo real us
 |------|------------|
 | UI | Flutter 3 + Material 3 |
 | Estado | Riverpod 2.0 (code gen) |
-| Navegación | go_router |
+| Navegación | go_router (StatefulShellRoute) |
 | Red | Dio + Retrofit |
 | Mapas | Google Maps Flutter SDK |
 | Storage seguro | flutter_secure_storage |
 | Cache local | Hive |
 | Errores | dartz (Either) |
+| Animaciones | flutter_animate · animations (Material Motion) · shimmer |
 
 ---
 
@@ -44,7 +45,7 @@ App de utilidad para León, Guanajuato que muestra gasolineras en tiempo real us
 ┌────────────────────────▼────────────────────────────────┐
 │                      CORE                                │
 │  DioClient │ AuthInterceptor │ SecureStorage │ Router   │
-│  AppTheme  │ Failures (sealed class)                    │
+│  AppTheme  │ AppPreferences  │ Failures (sealed class)  │
 └─────────────────────────────────────────────────────────┘
 ```
 
@@ -60,6 +61,27 @@ Domain **nunca** importa hacia arriba ni hacia Data.
 
 ---
 
+## Features implementados
+
+### Fase 1 (base)
+- **Auth**: login y registro con JWT, refresh automático en interceptor
+- **Mapa**: Google Maps con marcadores coloreados por precio (verde/amarillo/rojo), FABs animados, card de estadísticas
+
+### Fase 2 (esta iteración)
+| Feature | Descripción |
+|---------|-------------|
+| **Splash** | CustomPainter con anillos expansivos + logo spring animation |
+| **Onboarding** | 3 páginas con ilustraciones CustomPainter y parallax, indicador morfable píldora↔dot |
+| **Favoritos** | Persistencia Hive, corazón bounce `AnimationController`, pantalla vacía con pulso |
+| **Lista** | Shimmer loading, búsqueda live, staggered fadeIn+slideY, filtros aplicados |
+| **Detalle** | SliverAppBar colapsable, `FuelPriceGauge` semicircular CustomPainter animado, barras comparativas `TweenAnimationBuilder` |
+| **Filtros** | `DraggableScrollableSheet`, FilterChips animados, badge indicator en FAB |
+| **StationCard** | `OpenContainer` (Material Container Transform), favorito con bounce |
+| **Nav** | `AnimatedBottomNavBar` con píldora deslizante `easeOutBack` + escala de ícono |
+| **Conectividad** | `AnimatedContainer` slide-in automático cuando offline |
+
+---
+
 ## Comandos
 
 ### Generar código (build_runner)
@@ -72,7 +94,7 @@ flutter pub run build_runner build --delete-conflicting-outputs
 flutter pub run build_runner watch --delete-conflicting-outputs
 ```
 
-Los archivos generados (`*.g.dart`, `*.freezed.dart`) **no se commitean** — agrégalos a `.gitignore`.
+Los archivos generados (`*.g.dart`, `*.freezed.dart`) **no se commitean** — están en `.gitignore`.
 
 ### Correr tests
 
@@ -86,7 +108,24 @@ flutter test
 flutter run
 ```
 
-> **Nota:** Requiere agregar la API Key de Google Maps en `android/app/src/main/AndroidManifest.xml` y `ios/Runner/AppDelegate.swift` antes de correr.
+> **Nota:** Requiere la API Key de Google Maps en:
+> - Android: `android/app/src/main/AndroidManifest.xml` (meta-data `com.google.android.geo.API_KEY`)
+> - iOS: `ios/Runner/AppDelegate.swift` (`GMSServices.provideAPIKey`)
+
+---
+
+## Flujo de navegación
+
+```
+/  (Splash)
+├── /onboarding          ← primer install (flag en Hive)
+├── /login               ← sin token
+├── /register
+└── /home/*              ← con token (StatefulShellRoute)
+    ├── /home/map        ← tab 0
+    ├── /home/list       ← tab 1
+    └── /home/favorites  ← tab 2
+```
 
 ---
 
@@ -95,24 +134,7 @@ flutter run
 | Variable | Descripción |
 |----------|-------------|
 | `GOOGLE_MAPS_API_KEY` | API Key de Google Maps |
-| API base URL | Definida en `lib/core/network/dio_client.dart` → `_baseUrl` |
-
----
-
-## Estructura de carpetas
-
-```
-lib/
-├── core/           # Infraestructura transversal
-│   ├── error/      # sealed class Failure
-│   ├── network/    # Dio + AuthInterceptor
-│   ├── storage/    # SecureStorage (tokens)
-│   ├── router/     # go_router con guard de auth
-│   └── theme/      # Paleta Entaltek + Sansation
-└── features/
-    ├── auth/       # Login / Registro
-    └── gas_stations/ # Mapa de gasolineras CNE
-```
+| API base URL | `lib/core/network/dio_client.dart` → `_baseUrl` |
 
 ---
 
