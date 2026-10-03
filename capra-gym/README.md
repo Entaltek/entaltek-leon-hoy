@@ -3,18 +3,22 @@
 Propuesta de presencia digital desarrollada por Entaltek para Capra Gym.
 
 **Vista publicada:**
-https://rawcdn.githack.com/Entaltek/entaltek-leon-hoy/19ee1d88f1e2baf7778ac09e7a9d18fa46afbcac/capra-gym/index.html
+https://rawcdn.githack.com/Entaltek/entaltek-leon-hoy/e55cfee128ae65bd7654029fef2493e1bac46c68/capra-gym/index.html
 
-## Esta versión incluye
+## Versión actual
 
-- hero de alto impacto siguiendo la dirección visual aprobada;
+- diseño oscuro, limpio y con carácter;
 - mensualidad de $350 y próxima promoción de $300;
 - énfasis en variedad de equipo;
 - excelente ambiente y atención cercana;
-- reseñas de Google;
-- ubicación, teléfono, WhatsApp y Facebook;
+- 4.8 con 60 opiniones en Google;
+- horario visible;
+- ubicación y teléfono;
+- mapa real embebido de Google Maps;
+- marca Google visible en la sección de reseñas;
+- logo blanco sobre fondos oscuros y variante roja sobre fondo claro;
 - responsive mobile/desktop;
-- animaciones sutiles al hacer scroll;
-- fotografías ambientales de referencia, claramente no presentadas como instalaciones verificadas.
+- animaciones discretas;
+- fotografías ambientales de referencia.
 
-El documento mantiene `noindex,nofollow` mientras sea una propuesta y no el sitio oficial autorizado.
+El documento mantiene `noindex,nofollow` mientras siga siendo una propuesta y no el sitio oficial autorizado.
