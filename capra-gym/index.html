@@ -120,6 +120,48 @@ h2{font-size:clamp(42px,5vw,72px);margin-bottom:0}
 .mini-eq span{font-size:12px;color:#87857f}
 .equip-note{margin-top:18px;color:#73716c;font-size:11px}
 
+
+.catalog{padding:112px 0;background:#f4f1ea;color:#111;border-top:1px solid #d2cec5}
+.catalog-head{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:end;margin-bottom:46px}
+.catalog-head h2{font-size:clamp(44px,5vw,72px);margin:0}
+.catalog-head p{margin:0;color:#5e5952;font-size:17px;max-width:560px}
+.catalog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.merch-card{border:1px solid #d4d0c7;background:#fff;overflow:hidden}
+.merch-visual{height:360px;display:grid;place-items:center;position:relative;overflow:hidden}
+.merch-visual:after{content:"";position:absolute;left:50%;bottom:22px;width:54%;height:18px;transform:translateX(-50%);background:rgba(0,0,0,.14);filter:blur(14px);border-radius:50%}
+.shirt{
+  position:relative;width:210px;height:236px;border-radius:26px 26px 20px 20px;
+  filter:drop-shadow(0 18px 18px rgba(0,0,0,.14));z-index:2
+}
+.shirt:before,.shirt:after{
+  content:"";position:absolute;top:20px;width:76px;height:104px;background:inherit
+}
+.shirt:before{left:-48px;transform:rotate(22deg);border-radius:20px 8px 18px 26px}
+.shirt:after{right:-48px;transform:rotate(-22deg);border-radius:8px 20px 26px 18px}
+.shirt-neck{
+  position:absolute;z-index:3;top:-1px;left:50%;width:62px;height:34px;transform:translateX(-50%);
+  border-radius:0 0 32px 32px;background:var(--paper)
+}
+.shirt-logo{
+  position:absolute;z-index:4;top:76px;left:50%;width:82px;height:auto;transform:translateX(-50%)
+}
+.shirt-gray{background:#8e9193}.shirt-black{background:#151515}.shirt-olive{background:#59634e}
+.logo-white{filter:brightness(0) invert(1)}
+.logo-red-merch{filter:brightness(0) saturate(100%) invert(17%) sepia(98%) saturate(4460%) hue-rotate(345deg) brightness(93%) contrast(96%)}
+.logo-black{filter:brightness(0)}
+.merch-info{padding:22px 22px 24px}
+.merch-info h3{margin:0 0 6px;font-size:22px}
+.merch-info p{margin:0;color:#68635c;font-size:14px}
+.merch-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:18px;padding-top:16px;border-top:1px solid #e6e2da}
+.merch-meta span{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:#8b857d;font-weight:700}
+.merch-meta a{font-size:12px;font-weight:800;border-bottom:1px solid #777;padding-bottom:3px}
+.catalog-cta{
+  margin-top:18px;padding:28px 30px;background:#111;color:#f7f5ef;display:flex;align-items:center;
+  justify-content:space-between;gap:30px
+}
+.catalog-cta h3{margin:0 0 6px;font-size:25px}
+.catalog-cta p{margin:0;color:#aaa7a0;font-size:14px}
+
 .local-position{padding:82px 0;background:#f4f1ea;color:#111;border-top:1px solid #d2cec5}
 .local-position-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:start}
 .local-position h2{font-size:clamp(42px,4.8vw,68px);margin:0}
@@ -180,10 +222,10 @@ h2{font-size:clamp(42px,5vw,72px);margin-bottom:0}
   .nav.open{opacity:1;pointer-events:auto;transform:none}.nav a{padding:13px}.menu{display:block}
   .hero{grid-template-columns:1fr;min-height:0}.hero-copybox{min-height:620px;padding:130px 24px 80px}.hero-copybox:after{display:none}.hero-media{min-height:440px}
   .offergrid{grid-template-columns:1fr}.offer-main{padding-right:0;border-right:0;border-bottom:1px solid rgba(255,255,255,.25)}.offer-next{padding-left:0}
-  .why-head,.equip-head,.reviews-head,.visit-grid,.visit-head,.local-position-grid{grid-template-columns:1fr}
+  .why-head,.equip-head,.reviews-head,.visit-grid,.visit-head,.local-position-grid,.catalog-head{grid-template-columns:1fr}
   .benefits{grid-template-columns:1fr}.benefit{border-right:0;border-bottom:1px solid #cbc7bd;padding:26px 0;margin:0}
   .equip-grid{grid-template-columns:1fr;grid-template-rows:420px 300px 300px}.eq1{grid-row:auto}
-  .equip-strip{grid-template-columns:1fr 1fr}
+  .equip-strip{grid-template-columns:1fr 1fr}.catalog-grid{grid-template-columns:1fr 1fr}.catalog-cta{align-items:flex-start;flex-direction:column}
   .big-rating{text-align:left}.google-rating-line{justify-content:flex-start}.review{grid-template-columns:1fr;gap:12px}.review footer{text-align:left}
 }
 @media(max-width:600px){
@@ -192,9 +234,9 @@ h2{font-size:clamp(42px,5vw,72px);margin-bottom:0}
   .hero h1{font-size:61px}.hero-copybox{min-height:590px}.hero-media{min-height:360px}
   .rating-badge{right:18px;bottom:18px}
   .offer-main,.offer-next{align-items:flex-end}.offer-price{font-size:48px}
-  .why,.equipment,.reviews,.visit{padding:82px 0}
+  .why,.equipment,.catalog,.reviews,.visit{padding:82px 0}
   h2{font-size:43px}
-  .equip-grid{grid-template-rows:360px 270px 270px}.equip-strip{grid-template-columns:1fr}
+  .equip-grid{grid-template-rows:360px 270px 270px}.equip-strip{grid-template-columns:1fr}.catalog-grid{grid-template-columns:1fr}.merch-visual{height:320px}
   .atmosphere{min-height:520px}.atmo-copy h2{font-size:50px}.atmo-points{display:grid;grid-template-columns:1fr 1fr}
   .visit-info{grid-template-columns:1fr}.visit-info>div{border-right:0;border-bottom:1px solid #303030;margin-right:0;padding-right:0}.visit-info>div:last-child{border-bottom:0}.visit-brand{display:none}
   .footer-inner{flex-wrap:wrap;padding:24px 0}.footer-spacer{margin-left:0}
@@ -236,6 +278,7 @@ h2{font-size:clamp(42px,5vw,72px);margin-bottom:0}
   <nav class="nav" aria-label="Navegación principal">
     <a href="#por-que">Por qué Capra</a>
     <a href="#equipos">Equipo</a>
+    <a href="#playeras">Playeras</a>
     <a href="#ambiente">Ambiente</a>
     <a href="#resenas">Reseñas</a>
     <a href="#ubicacion">Ubicación</a>
@@ -351,6 +394,76 @@ h2{font-size:clamp(42px,5vw,72px);margin-bottom:0}
       <div class="mini-eq reveal"><strong>Poleas</strong><span>Más variantes en una misma rutina.</span></div>
     </div>
     <p class="equip-note">Imágenes de ambientación para esta propuesta; no representan necesariamente las instalaciones reales de Capra Gym.</p>
+  </div>
+</section>
+
+<section class="catalog" id="playeras">
+  <div class="wrap">
+    <div class="catalog-head">
+      <h2 class="reveal">Entrena con la marca puesta.</h2>
+      <p class="reveal">Capra también tiene playeras para entrenar y representar al gym. Tres combinaciones sencillas, fuertes y fáciles de usar dentro o fuera del gimnasio.</p>
+    </div>
+
+    <div class="catalog-grid">
+      <article class="merch-card reveal">
+        <div class="merch-visual">
+          <div class="shirt shirt-gray">
+            <div class="shirt-neck"></div>
+            <img class="shirt-logo logo-white" src="data:image/png;base64,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" alt="Playera gris Capra Gym con logo blanco">
+          </div>
+        </div>
+        <div class="merch-info">
+          <h3>Gris + blanco</h3>
+          <p>Playera gris con el logo de Capra en blanco. Limpia, neutra y fácil de combinar.</p>
+          <div class="merch-meta">
+            <span>Tallas por consultar</span>
+            <a href="https://wa.me/524779137130?text=Hola%20Capra%20Gym,%20quiero%20informes%20sobre%20la%20playera%20gris" target="_blank" rel="noopener">Consultar →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="merch-card reveal">
+        <div class="merch-visual">
+          <div class="shirt shirt-black">
+            <div class="shirt-neck"></div>
+            <img class="shirt-logo logo-red-merch" src="data:image/png;base64,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" alt="Playera negra Capra Gym con logo rojo">
+          </div>
+        </div>
+        <div class="merch-info">
+          <h3>Negra + rojo</h3>
+          <p>Playera negra con logo rojo. La combinación con más contraste y carácter de la marca.</p>
+          <div class="merch-meta">
+            <span>Tallas por consultar</span>
+            <a href="https://wa.me/524779137130?text=Hola%20Capra%20Gym,%20quiero%20informes%20sobre%20la%20playera%20negra" target="_blank" rel="noopener">Consultar →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="merch-card reveal">
+        <div class="merch-visual">
+          <div class="shirt shirt-olive">
+            <div class="shirt-neck"></div>
+            <img class="shirt-logo logo-black" src="data:image/png;base64,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" alt="Playera verde militar Capra Gym con logo negro">
+          </div>
+        </div>
+        <div class="merch-info">
+          <h3>Verde militar + negro</h3>
+          <p>Playera verde militar con logo negro. Una opción más sobria y distinta sin perder fuerza visual.</p>
+          <div class="merch-meta">
+            <span>Tallas por consultar</span>
+            <a href="https://wa.me/524779137130?text=Hola%20Capra%20Gym,%20quiero%20informes%20sobre%20la%20playera%20verde%20militar" target="_blank" rel="noopener">Consultar →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="catalog-cta reveal">
+      <div>
+        <h3>¿Cuál te llevarías?</h3>
+        <p>Pregunta por disponibilidad, tallas y precio directamente con Capra.</p>
+      </div>
+      <a class="btn btn-red" href="https://wa.me/524779137130?text=Hola%20Capra%20Gym,%20quiero%20ver%20las%20playeras%20disponibles" target="_blank" rel="noopener">Consultar playeras</a>
+    </div>
   </div>
 </section>
 
