@@ -3,7 +3,7 @@
 Propuesta de presencia digital desarrollada por Entaltek para Capra Gym.
 
 **Vista publicada:**
-https://rawcdn.githack.com/Entaltek/entaltek-leon-hoy/e55cfee128ae65bd7654029fef2493e1bac46c68/capra-gym/index.html
+https://rawcdn.githack.com/Entaltek/entaltek-leon-hoy/a61e8691667b7ab0785c43af3cfbf4a2ba46e196/capra-gym/index.html
 
 ## Versión actual
 
