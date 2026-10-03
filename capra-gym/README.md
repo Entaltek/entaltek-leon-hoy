@@ -1,13 +1,20 @@
 # Capra Gym · vista pública
 
-Vista conceptual desarrollada por Entaltek para modernizar la presencia digital de Capra Gym.
+Propuesta de presencia digital desarrollada por Entaltek para Capra Gym.
 
-**Vista en vivo (CDN):**
-https://rawcdn.githack.com/Entaltek/entaltek-leon-hoy/13bce40918cfc0d292cd581b41dedc9ae5182d48/capra-gym/index.html
+**Vista publicada:**
+https://rawcdn.githack.com/Entaltek/entaltek-leon-hoy/19ee1d88f1e2baf7778ac09e7a9d18fa46afbcac/capra-gym/index.html
 
-## Notas
+## Esta versión incluye
 
-- La landing es responsive y funciona como archivo HTML independiente.
-- Los CTA enlazan a WhatsApp, teléfono, Google Maps y Facebook.
-- Las fotografías son ambientales/de referencia, no fotografías verificadas de las instalaciones.
-- El documento incluye `noindex,nofollow` porque es una propuesta visual, no el sitio oficial del negocio.
+- hero de alto impacto siguiendo la dirección visual aprobada;
+- mensualidad de $350 y próxima promoción de $300;
+- énfasis en variedad de equipo;
+- excelente ambiente y atención cercana;
+- reseñas de Google;
+- ubicación, teléfono, WhatsApp y Facebook;
+- responsive mobile/desktop;
+- animaciones sutiles al hacer scroll;
+- fotografías ambientales de referencia, claramente no presentadas como instalaciones verificadas.
+
+El documento mantiene `noindex,nofollow` mientras sea una propuesta y no el sitio oficial autorizado.
