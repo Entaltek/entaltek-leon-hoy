@@ -4,141 +4,414 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#090909">
+<meta name="theme-color" content="#0a0a0a">
 <title>Capra Gym · León, Gto.</title>
-<meta name="description" content="Propuesta de presencia digital para Capra Gym en Loma Bonita, León, Guanajuato.">
+<meta name="description" content="Propuesta digital para Capra Gym en Loma Bonita, León, Guanajuato. Variedad de equipo, gran ambiente y atención cercana.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#090909;--panel:#101010;--paper:#f2f1ed;--ink:#f5f5f2;--muted:#aaa9a4;--line:#292929;--red:#e11d2e;--red2:#ff3140}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.5}a{color:inherit;text-decoration:none}button{font:inherit}
-.top{position:fixed;z-index:40;top:0;left:0;right:0;height:74px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,5vw,72px);background:linear-gradient(to bottom,rgba(7,7,7,.92),rgba(7,7,7,.18));backdrop-filter:blur(10px)}
-.logo{display:flex;align-items:center;gap:12px}.logo img{width:55px;height:auto;display:block}.logo span{font-size:11px;letter-spacing:.22em;color:#bababa}
-.nav{display:flex;align-items:center;gap:28px;font-size:13px}.nav a{color:#dbdbd8}.nav a:hover{color:#fff}.nav .pill{padding:10px 16px;border:1px solid rgba(255,255,255,.35);border-radius:999px;color:white}
-.menu{display:none;background:none;border:0}.menu i{display:block;width:24px;height:1px;background:#fff;margin:6px 0}
-.hero{position:relative;min-height:760px;height:94vh;display:flex;align-items:flex-end;overflow:hidden}
-.hero:before{content:"";position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=2200&q=88") center/cover no-repeat;transform:scale(1.02);animation:heroZoom 16s ease-in-out infinite alternate}
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,5,5,.94) 0%,rgba(5,5,5,.80) 37%,rgba(5,5,5,.25) 72%,rgba(5,5,5,.38) 100%),linear-gradient(0deg,rgba(0,0,0,.92),transparent 44%)}
-@keyframes heroZoom{to{transform:scale(1.08)}}
-.hero-content{position:relative;z-index:2;width:min(820px,84vw);margin:0 0 150px clamp(24px,8vw,120px)}
-.kicker{color:var(--red2);font-size:11px;font-weight:700;letter-spacing:.24em;margin:0 0 18px}
-h1,h2{font-family:Oswald,Inter,sans-serif;text-transform:uppercase;line-height:.95;letter-spacing:-.025em;margin:0}
-h1{font-size:clamp(58px,8vw,116px)}h1 span{color:var(--red2)}
-.hero-copy{max-width:590px;color:#d0d0cc;font-size:18px;margin:26px 0 30px}
-.actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap}.btn{display:inline-flex;min-height:48px;padding:0 20px;align-items:center;justify-content:center;border-radius:4px;font-size:14px;font-weight:700;transition:.2s}.btn:hover{transform:translateY(-2px)}.primary{background:var(--red);color:white}.primary:hover{background:var(--red2)}.link{font-size:14px;border-bottom:1px solid #666;padding-bottom:5px}
-.proof{position:absolute;z-index:3;left:clamp(24px,8vw,120px);right:clamp(24px,8vw,120px);bottom:38px;border-top:1px solid rgba(255,255,255,.22);padding-top:22px;display:flex;gap:42px}.proof div{padding-right:42px;border-right:1px solid rgba(255,255,255,.14)}.proof div:last-child{border-right:0}.proof strong{font-size:24px}.proof span{display:block;color:#92928e;font-size:12px;margin-top:2px}
-.section{padding:118px clamp(24px,8vw,120px)}.intro{background:var(--paper);color:#121212}.intro-top{display:grid;grid-template-columns:1.1fr .9fr;gap:85px;align-items:end}.section h2{font-size:clamp(44px,5.6vw,82px)}.lead{font-size:20px;color:#55524e;margin:0;max-width:620px}.features{display:grid;grid-template-columns:repeat(3,1fr);margin-top:76px;border-top:1px solid #cac9c3}.feature{padding:30px 34px 0 0;margin-right:34px;border-right:1px solid #cac9c3}.feature:last-child{border-right:0;margin-right:0}.feature b{display:block;color:var(--red);font-size:11px;letter-spacing:.18em}.feature h3{font-size:22px;margin:22px 0 10px}.feature p{margin:0;color:#66635f;font-size:15px}
-.break{display:grid;grid-template-columns:1.12fr .88fr;min-height:650px}.break-photo{background:url("https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1600&q=88") center/cover no-repeat;filter:saturate(.78) contrast(1.08)}.break-copy{padding:90px clamp(28px,7vw,100px);display:flex;flex-direction:column;justify-content:center}.break-copy p:last-child{color:#b9b9b5;font-size:18px;max-width:560px;margin:26px 0 0}
-.reviews{background:#111}.reviews-head{display:grid;grid-template-columns:1fr auto;gap:50px;align-items:end}.rating{text-align:right}.rating strong{font:600 74px/1 Oswald}.stars{color:#ffb400;letter-spacing:.06em}.rating small{display:block;color:#777;margin-top:6px}.review-list{margin-top:68px;border-top:1px solid var(--line)}.review{display:grid;grid-template-columns:1fr 260px;gap:40px;padding:34px 0;border-bottom:1px solid var(--line);margin:0}.review p{font-size:clamp(20px,2.2vw,31px);max-width:940px;margin:0}.review footer{color:#7f7f7a;font-size:13px;text-align:right;align-self:end}
-.visit{display:grid;grid-template-columns:1.22fr .78fr;gap:70px;padding:110px clamp(24px,8vw,120px)}.visit h2{font-size:clamp(44px,5.6vw,82px)}.data{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin:44px 0}.data p{display:flex;flex-direction:column;margin:0}.data span{font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:#70706c;margin-bottom:7px}.ghost{border:1px solid #474747}.map{min-height:390px;border:1px solid #303030;border-radius:7px;padding:34px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;background:radial-gradient(circle at 62% 38%,rgba(225,29,46,.22),transparent 18%),linear-gradient(135deg,#191919,#0d0d0d)}.map:before,.map:after{content:"";position:absolute;background:#2e2e2e;opacity:.85}.map:before{height:1px;width:140%;left:-20%;top:45%;transform:rotate(-20deg)}.map:after{width:1px;height:140%;top:-20%;left:58%;transform:rotate(18deg)}.pin{position:absolute;left:59%;top:35%;font-size:33px;color:var(--red2);z-index:2}.map span,.map strong,.map small{z-index:2}.map span{color:var(--red2);font-size:10px;font-weight:700;letter-spacing:.2em}.map strong{font:600 38px Oswald}.map small{color:#777}
-.footer{min-height:116px;padding:0 clamp(24px,8vw,120px);border-top:1px solid #202020;display:flex;align-items:center;gap:28px;color:#74746f;font-size:12px}.footer .mini{margin-left:auto}.demo-note{position:fixed;z-index:50;right:18px;bottom:18px;background:rgba(12,12,12,.88);border:1px solid #2e2e2e;border-radius:999px;padding:8px 12px;color:#888;font-size:10px;backdrop-filter:blur(8px)}
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.reveal.on{opacity:1;transform:none}
-@media(max-width:900px){.nav{position:fixed;left:16px;right:16px;top:72px;display:flex;flex-direction:column;align-items:stretch;gap:0;padding:9px;background:#111;border:1px solid #2b2b2b;border-radius:8px;opacity:0;pointer-events:none;transform:translateY(-8px);transition:.2s}.nav.open{opacity:1;pointer-events:auto;transform:none}.nav a{padding:13px}.menu{display:block}.hero{height:auto;min-height:780px}.hero-content{margin:0 24px 195px;width:auto}.proof{left:24px;right:24px;bottom:30px;display:grid;grid-template-columns:repeat(3,1fr);gap:0}.proof div{padding-right:10px;margin-right:10px}.intro-top,.break,.reviews-head,.visit{grid-template-columns:1fr}.intro-top{gap:28px}.features{grid-template-columns:1fr;margin-top:52px}.feature{border-right:0;border-bottom:1px solid #cac9c3;padding:27px 0;margin:0}.break{min-height:0}.break-photo{min-height:440px}.break-copy{padding:72px 24px}.rating{text-align:left}.review{grid-template-columns:1fr;gap:12px}.review footer{text-align:left}.visit{gap:32px}.data{grid-template-columns:1fr}.footer{flex-wrap:wrap;padding-top:28px;padding-bottom:28px}.footer .mini{margin-left:0}}
-@media(max-width:600px){h1{font-size:56px}.hero-copy{font-size:16px}.hero-content{margin-bottom:225px}.proof{grid-template-columns:1fr;gap:8px}.proof div{border-right:0;border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:7px}.proof strong{font-size:18px}.section,.visit{padding:82px 24px}.section h2,.visit h2,.break-copy h2{font-size:44px}.demo-note{display:none}}
-@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.hero:before{animation:none}.reveal{opacity:1;transform:none;transition:none}}
+:root{
+  --bg:#0a0a0a;--panel:#101010;--panel2:#141414;--paper:#f4f1ea;--ink:#f7f5ef;
+  --muted:#a9a7a0;--muted2:#706e68;--line:#292929;--red:#e11d2e;--red2:#ff3042;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.5}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.wrap{width:min(var(--max),calc(100% - 48px));margin:0 auto}
+.eyebrow{margin:0 0 14px;color:var(--red2);font-size:11px;font-weight:800;letter-spacing:.23em;text-transform:uppercase}
+h1,h2,h3,p{margin-top:0}
+h1,h2{font-family:Oswald,Inter,sans-serif;text-transform:uppercase;line-height:.95;letter-spacing:-.025em}
+h2{font-size:clamp(42px,5vw,72px);margin-bottom:0}
+.btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:0 20px;border-radius:3px;font-size:14px;font-weight:800;transition:.2s;border:1px solid transparent}
+.btn:hover{transform:translateY(-2px)}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red2)}
+.btn-line{border-color:#4a4a4a;background:rgba(255,255,255,.02)}
+.btn-line:hover{border-color:#777}
+.top{
+  position:fixed;z-index:50;top:0;left:0;right:0;height:76px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 max(24px,calc((100vw - var(--max))/2));
+  background:linear-gradient(to bottom,rgba(7,7,7,.94),rgba(7,7,7,.42),transparent);
+  backdrop-filter:blur(8px)
+}
+.logo{display:flex;align-items:center;gap:12px}
+.logo img{width:58px;height:auto}
+.logo small{font-size:10px;color:#9c9a94;letter-spacing:.22em}
+.nav{display:flex;align-items:center;gap:26px;font-size:12px}
+.nav>a:not(.nav-cta){color:#d7d5ce}
+.nav>a:not(.nav-cta):hover{color:#fff}
+.nav-cta{padding:10px 16px;border:1px solid rgba(255,255,255,.32);border-radius:999px}
+.menu{display:none;background:none;border:0;color:#fff}
+.menu i{display:block;width:24px;height:1px;background:#fff;margin:6px 0}
+
+.hero{min-height:760px;display:grid;grid-template-columns:1fr 1.22fr;background:#070707}
+.hero-copybox{display:flex;align-items:flex-end;padding:130px 7vw 105px max(24px,calc((100vw - var(--max))/2));position:relative}
+.hero-copybox:after{content:"";position:absolute;right:-1px;top:0;bottom:0;width:110px;background:linear-gradient(90deg,#070707,transparent);z-index:2;pointer-events:none}
+.hero h1{font-size:clamp(70px,8vw,122px);margin:0 0 24px;max-width:620px}
+.hero h1 em{font-style:normal;color:var(--red2)}
+.hero-lead{font-size:18px;color:#c7c4bd;max-width:520px;margin-bottom:30px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-media{position:relative;min-height:760px;overflow:hidden}
+.hero-media:before{content:"";position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1800&q=88") center/cover no-repeat;transform:scale(1.03);transition:transform 1.2s ease}
+.hero:hover .hero-media:before{transform:scale(1.07)}
+.hero-media:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,7,7,.32),transparent 34%),linear-gradient(0deg,rgba(0,0,0,.54),transparent 48%)}
+.rating-badge{
+  position:absolute;z-index:3;right:36px;bottom:38px;padding:18px 20px;border:1px solid rgba(255,255,255,.22);
+  background:rgba(8,8,8,.76);backdrop-filter:blur(12px);min-width:180px
+}
+.rating-badge strong{display:block;font:600 44px/1 Oswald}
+.rating-badge .stars{color:#ffb000;letter-spacing:.08em;font-size:13px;margin:5px 0}
+.rating-badge small{color:#aaa;font-size:11px}
+
+.offerbar{background:var(--red);color:#fff}
+.offergrid{display:grid;grid-template-columns:1.2fr .8fr}
+.offer-main,.offer-next{padding:24px 0;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.offer-main{padding-right:48px;border-right:1px solid rgba(255,255,255,.25)}
+.offer-next{padding-left:48px}
+.offer-label{font-size:11px;text-transform:uppercase;letter-spacing:.18em;font-weight:800;opacity:.85}
+.offer-price{font:600 clamp(42px,5vw,64px)/1 Oswald;margin:4px 0 0}
+.offer-copy{font-size:13px;max-width:260px;margin:0;opacity:.9}
+.offer-next .offer-price{text-decoration:none}
+.offer-next .tag{padding:7px 9px;border:1px solid rgba(255,255,255,.5);font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.16em}
+
+.why{background:var(--paper);color:#121212;padding:110px 0}
+.why-head{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:end}
+.why-head p:last-child{margin:0;color:#56524c;font-size:18px;max-width:540px}
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);margin-top:65px;border-top:1px solid #cbc7bd}
+.benefit{padding:32px 32px 0 0;margin-right:32px;border-right:1px solid #cbc7bd}
+.benefit:last-child{border-right:0;margin-right:0}
+.icon{width:42px;height:42px;border:1px solid #c8c3b9;border-radius:50%;display:grid;place-items:center;font-size:20px;color:var(--red);margin-bottom:26px}
+.benefit h3{font-size:21px;margin-bottom:8px}
+.benefit p{color:#66615b;font-size:14px;margin:0}
+
+.equipment{padding:118px 0;background:#0d0d0d}
+.equip-head{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end;margin-bottom:42px}
+.equip-head p:last-child{color:#9c9a94;margin:0;max-width:430px;font-size:15px}
+.equip-grid{display:grid;grid-template-columns:1.25fr 1fr;grid-template-rows:340px 240px;gap:14px}
+.eq{position:relative;overflow:hidden;border:1px solid #242424;background:#151515}
+.eq:before{content:"";position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .65s ease,filter .65s ease;filter:saturate(.76) contrast(1.04)}
+.eq:hover:before{transform:scale(1.045);filter:saturate(.9) contrast(1.08)}
+.eq:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.86),rgba(0,0,0,.06) 62%)}
+.eq1{grid-row:1 / span 2}.eq1:before{background-image:url("https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1400&q=88")}
+.eq2:before{background-image:url("https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=88")}
+.eq3:before{background-image:url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=88")}
+.eq-content{position:absolute;z-index:3;left:28px;right:28px;bottom:24px}
+.eq-content span{display:block;color:var(--red2);font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;margin-bottom:6px}
+.eq-content h3{font-size:clamp(25px,3vw,40px);margin-bottom:6px}
+.eq-content p{margin:0;color:#c2c0ba;font-size:14px;max-width:520px}
+.equip-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
+.mini-eq{border:1px solid #262626;padding:20px 18px;background:#121212}
+.mini-eq strong{display:block;font-size:14px;margin-bottom:5px}
+.mini-eq span{font-size:12px;color:#87857f}
+.equip-note{margin-top:18px;color:#73716c;font-size:11px}
+
+.atmosphere{position:relative;min-height:600px;display:flex;align-items:center;overflow:hidden}
+.atmosphere:before{content:"";position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=2000&q=88") center/cover no-repeat;filter:saturate(.68)}
+.atmosphere:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,5,5,.96) 0%,rgba(5,5,5,.78) 46%,rgba(5,5,5,.32) 100%)}
+.atmosphere .wrap{position:relative;z-index:2}
+.atmo-copy{max-width:720px}
+.atmo-copy h2{font-size:clamp(50px,6vw,88px)}
+.atmo-copy p{font-size:18px;color:#c1bfb9;max-width:580px;margin:24px 0 0}
+.atmo-points{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.atmo-points span{border:1px solid rgba(255,255,255,.26);padding:9px 12px;font-size:12px;background:rgba(0,0,0,.22)}
+
+.reviews{background:var(--paper);color:#111;padding:110px 0}
+.reviews-head{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end}
+.big-rating{text-align:right}
+.big-rating strong{font:600 64px/1 Oswald}
+.big-rating .stars{color:#ffad00}
+.big-rating small{display:block;color:#777;margin-top:4px}
+.review-list{margin-top:55px;border-top:1px solid #cec9bf}
+.review{display:grid;grid-template-columns:1fr 220px;gap:40px;padding:28px 0;border-bottom:1px solid #cec9bf;margin:0}
+.review p{font-size:clamp(20px,2.1vw,28px);margin:0;max-width:880px}
+.review footer{align-self:end;text-align:right;color:#77736d;font-size:12px}
+
+.visit{padding:110px 0;background:#0b0b0b}
+.visit-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:stretch}
+.visit-copy h2{font-size:clamp(46px,5.3vw,76px)}
+.visit-copy>p:not(.eyebrow){color:#aaa8a2;max-width:560px;font-size:17px;margin:24px 0 34px}
+.contact-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:34px}
+.contact-row div{border-top:1px solid #333;padding-top:15px}
+.contact-row small{display:block;color:#6f6d67;font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:7px}
+.contact-row strong,.contact-row a{font-size:14px}
+.map{
+  min-height:410px;border:1px solid #303030;background:
+  radial-gradient(circle at 64% 41%,rgba(225,29,46,.26),transparent 15%),
+  linear-gradient(135deg,#181818,#0f0f0f);
+  position:relative;overflow:hidden;padding:34px;display:flex;flex-direction:column;justify-content:flex-end
+}
+.map:before,.map:after{content:"";position:absolute;background:#2f2f2f;opacity:.85}
+.map:before{height:1px;width:150%;left:-25%;top:42%;transform:rotate(-18deg)}
+.map:after{width:1px;height:150%;top:-25%;left:58%;transform:rotate(18deg)}
+.pin{position:absolute;left:59%;top:34%;font-size:34px;color:var(--red2);z-index:2}
+.map span,.map strong,.map small{position:relative;z-index:2}
+.map span{color:var(--red2);font-size:10px;font-weight:800;letter-spacing:.18em}
+.map strong{font:600 36px Oswald}
+.map small{color:#777}
+.footer{min-height:110px;border-top:1px solid #202020;display:flex;align-items:center}
+.footer-inner{display:flex;align-items:center;gap:26px;width:100%;font-size:12px;color:#6f6d67}
+.footer-inner .logo img{width:48px}
+.footer-spacer{margin-left:auto}
+.note{position:fixed;z-index:60;right:16px;bottom:16px;border:1px solid #2b2b2b;background:rgba(9,9,9,.86);backdrop-filter:blur(8px);padding:7px 10px;border-radius:999px;color:#777;font-size:10px}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
+.reveal.on{opacity:1;transform:none}
+
+@media(max-width:960px){
+  .top{height:68px;padding:0 20px}
+  .nav{position:fixed;left:16px;right:16px;top:70px;display:flex;flex-direction:column;align-items:stretch;gap:0;padding:8px;background:#111;border:1px solid #2d2d2d;opacity:0;pointer-events:none;transform:translateY(-8px);transition:.2s}
+  .nav.open{opacity:1;pointer-events:auto;transform:none}.nav a{padding:13px}.menu{display:block}
+  .hero{grid-template-columns:1fr;min-height:0}.hero-copybox{min-height:620px;padding:130px 24px 80px}.hero-copybox:after{display:none}.hero-media{min-height:440px}
+  .offergrid{grid-template-columns:1fr}.offer-main{padding-right:0;border-right:0;border-bottom:1px solid rgba(255,255,255,.25)}.offer-next{padding-left:0}
+  .why-head,.equip-head,.reviews-head,.visit-grid{grid-template-columns:1fr}
+  .benefits{grid-template-columns:1fr}.benefit{border-right:0;border-bottom:1px solid #cbc7bd;padding:26px 0;margin:0}
+  .equip-grid{grid-template-columns:1fr;grid-template-rows:420px 300px 300px}.eq1{grid-row:auto}
+  .equip-strip{grid-template-columns:1fr 1fr}
+  .big-rating{text-align:left}.review{grid-template-columns:1fr;gap:12px}.review footer{text-align:left}
+}
+@media(max-width:600px){
+  .wrap{width:min(100% - 36px,var(--max))}
+  .logo small{display:none}
+  .hero h1{font-size:61px}.hero-copybox{min-height:590px}.hero-media{min-height:360px}
+  .rating-badge{right:18px;bottom:18px}
+  .offer-main,.offer-next{align-items:flex-end}.offer-price{font-size:48px}
+  .why,.equipment,.reviews,.visit{padding:82px 0}
+  h2{font-size:43px}
+  .equip-grid{grid-template-rows:360px 270px 270px}.equip-strip{grid-template-columns:1fr}
+  .atmosphere{min-height:520px}.atmo-copy h2{font-size:50px}.atmo-points{display:grid;grid-template-columns:1fr 1fr}
+  .contact-row{grid-template-columns:1fr}
+  .footer-inner{flex-wrap:wrap;padding:24px 0}.footer-spacer{margin-left:0}
+  .note{display:none}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.reveal{opacity:1;transform:none;transition:none}.hero-media:before,.eq:before{transition:none}}
 </style>
 </head>
 <body>
 <header class="top">
   <a class="logo" href="#inicio" aria-label="Capra Gym">
     <img src="data:image/png;base64,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" alt="Capra Gym">
-    <span>LOMA BONITA · LEÓN</span>
+    <small>LOMA BONITA · LEÓN</small>
   </a>
   <button class="menu" aria-label="Abrir menú" aria-expanded="false"><i></i><i></i></button>
-  <nav class="nav" aria-label="Navegación">
-    <a href="#entrena">Entrena</a>
-    <a href="#comunidad">Comunidad</a>
+  <nav class="nav" aria-label="Navegación principal">
+    <a href="#por-que">Por qué Capra</a>
+    <a href="#equipos">Equipo</a>
+    <a href="#ambiente">Ambiente</a>
+    <a href="#resenas">Reseñas</a>
     <a href="#ubicacion">Ubicación</a>
-    <a class="pill" href="https://wa.me/524779137130?text=Hola%20Capra%20Gym,%20quiero%20informes" target="_blank" rel="noopener">Pedir informes</a>
+    <a class="nav-cta" href="https://wa.me/524779137130?text=Hola%20Capra%20Gym,%20quiero%20informes" target="_blank" rel="noopener">Contactar</a>
   </nav>
 </header>
 
 <main>
 <section class="hero" id="inicio">
-  <div class="hero-content reveal">
-    <p class="kicker">CAPRA GYM · LEÓN, GUANAJUATO</p>
-    <h1>Entrena bien.<br><span>Siéntete a gusto.</span></h1>
-    <p class="hero-copy">Variedad de equipo, atención cercana y un ambiente que quienes entrenan aquí recomiendan.</p>
-    <div class="actions">
-      <a class="btn primary" href="https://wa.me/524779137130?text=Hola%20Capra%20Gym,%20quiero%20informes" target="_blank" rel="noopener">Escribir por WhatsApp</a>
-      <a class="link" href="#ubicacion">Cómo llegar ↘</a>
+  <div class="hero-copybox">
+    <div class="reveal">
+      <p class="eyebrow">CAPRA GYM · LEÓN, GTO.</p>
+      <h1>Entrena fuerte.<br><em>Quédate por el ambiente.</em></h1>
+      <p class="hero-lead">Variedad de equipo, atención cercana y una comunidad que hace más fácil volver a entrenar.</p>
+      <div class="hero-actions">
+        <a class="btn btn-red" href="https://wa.me/524779137130?text=Hola%20Capra%20Gym,%20quiero%20informes" target="_blank" rel="noopener">Pedir informes</a>
+        <a class="btn btn-line" href="#equipos">Ver el equipo</a>
+      </div>
     </div>
   </div>
-  <div class="proof reveal">
-    <div><strong>4.8</strong><span>calificación en Google</span></div>
-    <div><strong>59</strong><span>opiniones publicadas</span></div>
-    <div><strong>Buen ambiente</strong><span>una idea que se repite</span></div>
+  <div class="hero-media" aria-label="Fotografía ambiental de gimnasio">
+    <div class="rating-badge reveal">
+      <strong>4.8</strong>
+      <div class="stars">★★★★★</div>
+      <small>59 opiniones en Google</small>
+    </div>
   </div>
 </section>
 
-<section class="section intro" id="entrena">
-  <p class="kicker reveal">LO QUE LA GENTE VALORA</p>
-  <div class="intro-top">
-    <h2 class="reveal">Lo importante es querer volver mañana.</h2>
-    <p class="lead reveal">En las opiniones de Capra aparecen una y otra vez el equipo, el trato y el ambiente. Esa es la experiencia que esta propuesta pone al frente.</p>
-  </div>
-  <div class="features">
-    <article class="feature reveal"><b>01</b><h3>Variedad para entrenar</h3><p>Los usuarios mencionan muchas máquinas y equipo para trabajar distintas zonas del cuerpo.</p></article>
-    <article class="feature reveal"><b>02</b><h3>Atención cercana</h3><p>El trato del instructor aparece entre los puntos mejor valorados en las reseñas.</p></article>
-    <article class="feature reveal"><b>03</b><h3>Buen ambiente</h3><p>Tranquilo, respetuoso y agradable: así describen el espacio varias opiniones.</p></article>
-  </div>
-</section>
-
-<section class="break">
-  <div class="break-photo reveal" role="img" aria-label="Fotografía ilustrativa de entrenamiento con pesas"></div>
-  <div class="break-copy reveal">
-    <p class="kicker">ENTRENAR SIN COMPLICARLO</p>
-    <h2>Un gimnasio cercano puede ser justo lo que necesitas.</h2>
-    <p>Equipo para trabajar, atención cuando la necesitas y un ambiente en el que puedes concentrarte en tu entrenamiento.</p>
+<section class="offerbar" aria-label="Precios y promociones">
+  <div class="wrap offergrid">
+    <div class="offer-main reveal">
+      <div>
+        <div class="offer-label">Mensualidad</div>
+        <div class="offer-price">$350</div>
+      </div>
+      <p class="offer-copy">Entrena con acceso al equipo disponible y forma parte de la comunidad Capra.</p>
+    </div>
+    <div class="offer-next reveal">
+      <div>
+        <div class="offer-label">Próxima promoción</div>
+        <div class="offer-price">$300</div>
+      </div>
+      <span class="tag">Muy pronto</span>
+    </div>
   </div>
 </section>
 
-<section class="section reviews" id="comunidad">
-  <div class="reviews-head">
-    <div><p class="kicker reveal">RESEÑAS DE GOOGLE</p><h2 class="reveal">La comunidad ya tiene algo que decir.</h2></div>
-    <div class="rating reveal"><strong>4.8</strong><div class="stars">★★★★★</div><small>59 opiniones</small></div>
+<section class="why" id="por-que">
+  <div class="wrap">
+    <p class="eyebrow reveal">POR QUÉ CAPRA</p>
+    <div class="why-head">
+      <h2 class="reveal">Lo que importa cuando vienes a entrenar.</h2>
+      <p class="reveal">No se trata de verse como una cadena enorme. Se trata de tener equipo para trabajar, un ambiente agradable y atención cuando hace falta.</p>
+    </div>
+    <div class="benefits">
+      <article class="benefit reveal">
+        <div class="icon">🏋</div>
+        <h3>Variedad de equipo</h3>
+        <p>Máquinas, peso libre, poleas y estaciones para trabajar distintas zonas del cuerpo.</p>
+      </article>
+      <article class="benefit reveal">
+        <div class="icon">◎</div>
+        <h3>Excelente ambiente</h3>
+        <p>Varias opiniones describen un espacio tranquilo, respetuoso y agradable para entrenar.</p>
+      </article>
+      <article class="benefit reveal">
+        <div class="icon">✓</div>
+        <h3>Atención cercana</h3>
+        <p>El trato del instructor aparece de forma constante entre los puntos mejor valorados.</p>
+      </article>
+    </div>
   </div>
-  <div class="review-list">
-    <blockquote class="review reveal"><p>“Muy buen lugar para entrenar… el precio es económico y el instructor, una excelente persona.”</p><footer>Reggi Play · Google</footer></blockquote>
-    <blockquote class="review reveal"><p>“Buen ambiente, todo funciona, excelente música, respeto total y buena atención del instructor.”</p><footer>Carlo · Google</footer></blockquote>
-    <blockquote class="review reveal"><p>“Muy buen gym, gran ambiente, una comunidad genial.”</p><footer>A.J.S.R · Google</footer></blockquote>
+</section>
+
+<section class="equipment" id="equipos">
+  <div class="wrap">
+    <p class="eyebrow reveal">EQUIPO PARA ENTRENAR A TU MANERA</p>
+    <div class="equip-head">
+      <h2 class="reveal">Más variedad.<br>Más opciones.</h2>
+      <p class="reveal">Una propuesta visual enfocada en lo que más se menciona sobre Capra: muchas máquinas y equipo suficiente para una rutina completa.</p>
+    </div>
+
+    <div class="equip-grid">
+      <article class="eq eq1 reveal">
+        <div class="eq-content">
+          <span>Zona principal</span>
+          <h3>Peso libre y fuerza</h3>
+          <p>Mancuernas, barras, bancos y estaciones para desarrollar fuerza con distintos ejercicios.</p>
+        </div>
+      </article>
+      <article class="eq eq2 reveal">
+        <div class="eq-content">
+          <span>Máquinas</span>
+          <h3>Trabajo guiado</h3>
+          <p>Opciones para entrenar grupos musculares específicos con mayor control.</p>
+        </div>
+      </article>
+      <article class="eq eq3 reveal">
+        <div class="eq-content">
+          <span>Entrenamiento completo</span>
+          <h3>Poleas y accesorios</h3>
+          <p>Recursos para complementar una rutina y variar estímulos.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="equip-strip">
+      <div class="mini-eq reveal"><strong>Mancuernas</strong><span>Diferentes cargas para progresar.</span></div>
+      <div class="mini-eq reveal"><strong>Barras y discos</strong><span>Base para trabajo de fuerza.</span></div>
+      <div class="mini-eq reveal"><strong>Máquinas</strong><span>Trabajo por grupos musculares.</span></div>
+      <div class="mini-eq reveal"><strong>Poleas</strong><span>Más variantes en una misma rutina.</span></div>
+    </div>
+    <p class="equip-note">Imágenes de ambientación para esta propuesta; no representan necesariamente las instalaciones reales de Capra Gym.</p>
+  </div>
+</section>
+
+<section class="atmosphere" id="ambiente">
+  <div class="wrap">
+    <div class="atmo-copy reveal">
+      <p class="eyebrow">EL AMBIENTE TAMBIÉN CUENTA</p>
+      <h2>Entrenar bien se siente mejor cuando estás a gusto.</h2>
+      <p>Capra destaca por algo que no se compra con máquinas nuevas: la gente habla bien del ambiente, del respeto y de la atención.</p>
+      <div class="atmo-points">
+        <span>Buen ambiente</span>
+        <span>Respeto</span>
+        <span>Buena música</span>
+        <span>Atención cercana</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="resenas">
+  <div class="wrap">
+    <div class="reviews-head">
+      <div>
+        <p class="eyebrow reveal">RESEÑAS DE GOOGLE</p>
+        <h2 class="reveal">La reputación ya existe.<br>Ahora hay que mostrarla.</h2>
+      </div>
+      <div class="big-rating reveal"><strong>4.8</strong><div class="stars">★★★★★</div><small>59 opiniones</small></div>
+    </div>
+
+    <div class="review-list">
+      <blockquote class="review reveal">
+        <p>“Muy buen lugar para entrenar, grande, con todas las máquinas para poder trabajar tu cuerpo.”</p>
+        <footer>Reggi Play · Google</footer>
+      </blockquote>
+      <blockquote class="review reveal">
+        <p>“Buen ambiente, todo funciona, excelente música, respeto total y buena atención del instructor.”</p>
+        <footer>Carlo · Google</footer>
+      </blockquote>
+      <blockquote class="review reveal">
+        <p>“Muy buen gym, gran ambiente, una comunidad genial.”</p>
+        <footer>A.J.S.R · Google</footer>
+      </blockquote>
+    </div>
   </div>
 </section>
 
 <section class="visit" id="ubicacion">
-  <div class="reveal">
-    <p class="kicker">VISÍTANOS</p>
-    <h2>Tu siguiente entrenamiento puede empezar aquí.</h2>
-    <div class="data">
-      <p><span>Dirección</span>Calle Ana María, Loma Bonita, 37420 León, Gto.</p>
-      <p><span>Teléfono</span><a href="tel:+524779137130">477 913 7130</a></p>
+  <div class="wrap visit-grid">
+    <div class="visit-copy reveal">
+      <p class="eyebrow">VEN A CONOCER CAPRA</p>
+      <h2>Tu siguiente entrenamiento puede empezar aquí.</h2>
+      <p>Pregunta por la mensualidad de $350 y por la próxima promoción de $300 directamente por WhatsApp.</p>
+      <div class="contact-row">
+        <div><small>Dirección</small><strong>Calle Ana María, Loma Bonita, 37420 León, Gto.</strong></div>
+        <div><small>Teléfono</small><a href="tel:+524779137130">477 913 7130</a></div>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-red" href="https://wa.me/524779137130?text=Hola%20Capra%20Gym,%20quiero%20informes%20sobre%20la%20mensualidad%20y%20la%20próxima%20promoción" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+        <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=Capra+Gym+Loma+Bonita+Leon+Guanajuato" target="_blank" rel="noopener">Abrir en Maps</a>
+      </div>
     </div>
-    <div class="actions">
-      <a class="btn primary" href="https://wa.me/524779137130?text=Hola%20Capra%20Gym,%20quiero%20informes" target="_blank" rel="noopener">Pedir informes</a>
-      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Capra+Gym+Loma+Bonita+Leon+Guanajuato" target="_blank" rel="noopener">Abrir en Maps</a>
-    </div>
+    <a class="map reveal" href="https://www.google.com/maps/search/?api=1&query=Capra+Gym+Loma+Bonita+Leon+Guanajuato" target="_blank" rel="noopener" aria-label="Abrir Capra Gym en Google Maps">
+      <div class="pin">●</div>
+      <span>LOMA BONITA</span>
+      <strong>CAPRA GYM</strong>
+      <small>León, Guanajuato</small>
+    </a>
   </div>
-  <a class="map reveal" href="https://www.google.com/maps/search/?api=1&query=Capra+Gym+Loma+Bonita+Leon+Guanajuato" target="_blank" rel="noopener">
-    <div class="pin">●</div><span>LOMA BONITA</span><strong>CAPRA GYM</strong><small>León, Guanajuato</small>
-  </a>
 </section>
 </main>
 
 <footer class="footer">
-  <div>CAPRA GYM</div>
-  <a href="https://www.facebook.com/Capra07/" target="_blank" rel="noopener">Facebook ↗</a>
-  <div class="mini">Propuesta visual · Entaltek · imágenes ambientales de referencia</div>
+  <div class="wrap footer-inner">
+    <div class="logo"><img src="data:image/png;base64,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" alt="Capra Gym"></div>
+    <a href="https://www.facebook.com/Capra07/" target="_blank" rel="noopener">Facebook ↗</a>
+    <span class="footer-spacer">Propuesta visual · Entaltek · imágenes ambientales de referencia</span>
+  </div>
 </footer>
-<div class="demo-note">Vista conceptual · Entaltek</div>
+<div class="note">Vista conceptual · Entaltek</div>
 
 <script>
-const els=document.querySelectorAll('.reveal');
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
-els.forEach((el,i)=>{el.style.transitionDelay=Math.min(i%4,3)*70+'ms';io.observe(el)});
-const menu=document.querySelector('.menu'),nav=document.querySelector('.nav');
-menu?.addEventListener('click',()=>{const o=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(o))});
-nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu?.setAttribute('aria-expanded','false')}));
+const els=[...document.querySelectorAll('.reveal')];
+const io=new IntersectionObserver((entries)=>entries.forEach((e)=>{
+  if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}
+}),{threshold:.12});
+els.forEach((el,i)=>{el.style.transitionDelay=Math.min(i%3,2)*70+'ms';io.observe(el)});
+
+const menu=document.querySelector('.menu');
+const nav=document.querySelector('.nav');
+menu?.addEventListener('click',()=>{
+  const open=nav.classList.toggle('open');
+  menu.setAttribute('aria-expanded',String(open));
+});
+nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  nav.classList.remove('open');menu?.setAttribute('aria-expanded','false');
+}));
 </script>
 </body>
 </html>
