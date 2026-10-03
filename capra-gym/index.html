@@ -5,8 +5,14 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#0a0a0a">
-<title>Capra Gym · León, Gto.</title>
-<meta name="description" content="Propuesta digital para Capra Gym en Loma Bonita, León, Guanajuato. Variedad de equipo, gran ambiente y atención cercana.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Capra Gym | Gimnasio en Loma Bonita, León">
+<meta property="og:description" content="Variedad de equipo, excelente ambiente y atención cercana. Mensualidad $350.">
+<meta name="geo.region" content="MX-GUA">
+<meta name="geo.placename" content="León de los Aldama">
+<!-- Preview pública: retirar noindex/nofollow al conectar el dominio oficial. -->
+<title>Capra Gym | Gimnasio en Loma Bonita, León</title>
+<meta name="description" content="Capra Gym en Loma Bonita, León: variedad de máquinas, peso libre, poleas, excelente ambiente y atención cercana. Mensualidad $350.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
@@ -55,7 +61,8 @@ h2{font-size:clamp(42px,5vw,72px);margin-bottom:0}
 .hero-copybox:after{content:"";position:absolute;right:-1px;top:0;bottom:0;width:110px;background:linear-gradient(90deg,#070707,transparent);z-index:2;pointer-events:none}
 .hero h1{font-size:clamp(70px,8vw,122px);margin:0 0 24px;max-width:620px}
 .hero h1 em{font-style:normal;color:var(--red2)}
-.hero-lead{font-size:18px;color:#c7c4bd;max-width:520px;margin-bottom:30px}
+.hero-lead{font-size:18px;color:#c7c4bd;max-width:560px;margin-bottom:14px}
+.hero-local{margin:0 0 30px;color:#85827b;font-size:12px;font-weight:700;letter-spacing:.08em}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
 .hero-media{position:relative;min-height:760px;overflow:hidden}
 .hero-media:before{content:"";position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1800&q=88") center/cover no-repeat;transform:scale(1.03);transition:transform 1.2s ease}
@@ -113,6 +120,11 @@ h2{font-size:clamp(42px,5vw,72px);margin-bottom:0}
 .mini-eq span{font-size:12px;color:#87857f}
 .equip-note{margin-top:18px;color:#73716c;font-size:11px}
 
+.local-position{padding:82px 0;background:#f4f1ea;color:#111;border-top:1px solid #d2cec5}
+.local-position-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:start}
+.local-position h2{font-size:clamp(42px,4.8vw,68px);margin:0}
+.local-position p{font-size:18px;color:#59554f;max-width:650px;margin:0 0 18px}
+.text-link{display:inline-block;font-size:13px;font-weight:800;border-bottom:1px solid #777;padding-bottom:4px}
 .atmosphere{position:relative;min-height:600px;display:flex;align-items:center;overflow:hidden}
 .atmosphere:before{content:"";position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=2000&q=88") center/cover no-repeat;filter:saturate(.68)}
 .atmosphere:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,5,5,.96) 0%,rgba(5,5,5,.78) 46%,rgba(5,5,5,.32) 100%)}
@@ -168,7 +180,7 @@ h2{font-size:clamp(42px,5vw,72px);margin-bottom:0}
   .nav.open{opacity:1;pointer-events:auto;transform:none}.nav a{padding:13px}.menu{display:block}
   .hero{grid-template-columns:1fr;min-height:0}.hero-copybox{min-height:620px;padding:130px 24px 80px}.hero-copybox:after{display:none}.hero-media{min-height:440px}
   .offergrid{grid-template-columns:1fr}.offer-main{padding-right:0;border-right:0;border-bottom:1px solid rgba(255,255,255,.25)}.offer-next{padding-left:0}
-  .why-head,.equip-head,.reviews-head,.visit-grid,.visit-head{grid-template-columns:1fr}
+  .why-head,.equip-head,.reviews-head,.visit-grid,.visit-head,.local-position-grid{grid-template-columns:1fr}
   .benefits{grid-template-columns:1fr}.benefit{border-right:0;border-bottom:1px solid #cbc7bd;padding:26px 0;margin:0}
   .equip-grid{grid-template-columns:1fr;grid-template-rows:420px 300px 300px}.eq1{grid-row:auto}
   .equip-strip{grid-template-columns:1fr 1fr}
@@ -190,6 +202,29 @@ h2{font-size:clamp(42px,5vw,72px);margin-bottom:0}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.reveal{opacity:1;transform:none;transition:none}.hero-media:before,.eq:before{transition:none}}
 </style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HealthClub",
+  "name":"Capra Gym",
+  "telephone":"+52 477 913 7130",
+  "priceRange":"$350 MXN mensual",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Calle Ana María",
+    "addressLocality":"León de los Aldama",
+    "addressRegion":"Guanajuato",
+    "postalCode":"37420",
+    "addressCountry":"MX"
+  },
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:30","closes":"14:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"16:00","closes":"22:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"14:00"}
+  ],
+  "sameAs":["https://www.facebook.com/Capra07/"]
+}
+</script>
 </head>
 <body>
 <header class="top">
@@ -212,8 +247,9 @@ h2{font-size:clamp(42px,5vw,72px);margin-bottom:0}
 <section class="hero" id="inicio">
   <div class="hero-copybox">
     <div class="reveal">
-      <h1>Entrena fuerte.<br><em>Quédate por el ambiente.</em></h1>
-      <p class="hero-lead">Variedad de equipo, atención cercana y una comunidad que hace más fácil volver a entrenar.</p>
+      <h1>Mucho equipo.<br><em>Buen ambiente.</em></h1>
+      <p class="hero-lead">Capra Gym es un gimnasio en Loma Bonita, León, con variedad de máquinas, peso libre y atención cercana para que vengas a entrenar sin complicarte.</p>
+      <p class="hero-local">Loma Bonita · León, Gto. · Mensualidad $350</p>
       <div class="hero-actions">
         <a class="btn btn-red" href="https://wa.me/524779137130?text=Hola%20Capra%20Gym,%20quiero%20informes" target="_blank" rel="noopener">Pedir informes</a>
         <a class="btn btn-line" href="#equipos">Ver el equipo</a>
@@ -236,7 +272,7 @@ h2{font-size:clamp(42px,5vw,72px);margin-bottom:0}
         <div class="offer-label">Mensualidad</div>
         <div class="offer-price">$350</div>
       </div>
-      <p class="offer-copy">Entrena con acceso al equipo disponible y forma parte de la comunidad Capra.</p>
+      <p class="offer-copy">Una mensualidad clara para entrenar con variedad de equipo y sin planes complicados.</p>
     </div>
     <div class="offer-next reveal">
       <div>
@@ -253,25 +289,25 @@ h2{font-size:clamp(42px,5vw,72px);margin-bottom:0}
     <div class="why-head">
       <div class="why-title reveal">
         <img class="logo-red" src="data:image/png;base64,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" alt="" aria-hidden="true">
-        <h2>Lo que importa cuando vienes a entrenar.</h2>
+        <h2>Un gym para entrenar de verdad.</h2>
       </div>
-      <p class="reveal">Aquí vienes a entrenar: equipo para trabajar distintas zonas del cuerpo, un ambiente agradable y atención cercana cuando hace falta.</p>
+      <p class="reveal">No necesitas una cadena enorme para entrenar bien. Necesitas opciones, comodidad y un lugar al que sí quieras volver.</p>
     </div>
     <div class="benefits">
       <article class="benefit reveal">
         <div class="icon">🏋</div>
-        <h3>Variedad de equipo</h3>
-        <p>Máquinas, peso libre, poleas y estaciones para trabajar distintas zonas del cuerpo.</p>
+        <h3>Más formas de entrenar</h3>
+        <p>Máquinas, peso libre, poleas, barras, discos y estaciones para construir rutinas completas.</p>
       </article>
       <article class="benefit reveal">
         <div class="icon">◎</div>
-        <h3>Excelente ambiente</h3>
-        <p>Varias opiniones describen un espacio tranquilo, respetuoso y agradable para entrenar.</p>
+        <h3>Ambiente que suma</h3>
+        <p>Las reseñas hablan de respeto, buena música y un espacio agradable para concentrarte en tu entrenamiento.</p>
       </article>
       <article class="benefit reveal">
         <div class="icon">✓</div>
-        <h3>Atención cercana</h3>
-        <p>El trato del instructor aparece de forma constante entre los puntos mejor valorados.</p>
+        <h3>Atención cuando la necesitas</h3>
+        <p>El trato del instructor aparece repetidamente entre los puntos mejor valorados por quienes entrenan aquí.</p>
       </article>
     </div>
   </div>
@@ -280,30 +316,30 @@ h2{font-size:clamp(42px,5vw,72px);margin-bottom:0}
 <section class="equipment" id="equipos">
   <div class="wrap">
     <div class="equip-head">
-      <h2 class="reveal">Más variedad.<br>Más opciones.</h2>
-      <p class="reveal">Distintas opciones para construir una rutina completa, variar ejercicios y trabajar fuerza con comodidad.</p>
+      <h2 class="reveal">Tu rutina no tiene que quedarse corta.</h2>
+      <p class="reveal">La variedad de equipo es uno de los puntos que más se repiten en las opiniones sobre Capra: más opciones para cambiar ejercicios, progresar y trabajar distintos grupos musculares.</p>
     </div>
 
     <div class="equip-grid">
       <article class="eq eq1 reveal">
         <div class="eq-content">
-          <span>Zona principal</span>
-          <h3>Peso libre y fuerza</h3>
-          <p>Mancuernas, barras, bancos y estaciones para desarrollar fuerza con distintos ejercicios.</p>
+          <span>Fuerza</span>
+          <h3>Peso libre</h3>
+          <p>Mancuernas, barras, discos y bancos para trabajar fuerza con libertad y progresar a tu ritmo.</p>
         </div>
       </article>
       <article class="eq eq2 reveal">
         <div class="eq-content">
           <span>Máquinas</span>
-          <h3>Trabajo guiado</h3>
-          <p>Opciones para entrenar grupos musculares específicos con mayor control.</p>
+          <h3>Más opciones por músculo</h3>
+          <p>Alternativas de trabajo guiado para piernas, pecho, espalda, brazos y más.</p>
         </div>
       </article>
       <article class="eq eq3 reveal">
         <div class="eq-content">
-          <span>Entrenamiento completo</span>
+          <span>Variedad</span>
           <h3>Poleas y accesorios</h3>
-          <p>Recursos para complementar una rutina y variar estímulos.</p>
+          <p>Más variantes para complementar tu rutina y evitar entrenar siempre de la misma forma.</p>
         </div>
       </article>
     </div>
@@ -318,11 +354,23 @@ h2{font-size:clamp(42px,5vw,72px);margin-bottom:0}
   </div>
 </section>
 
+<section class="local-position">
+  <div class="wrap local-position-grid">
+    <div class="reveal">
+      <h2>Tu gimnasio en Loma Bonita.</h2>
+    </div>
+    <div class="reveal">
+      <p>Si buscas un gym cerca de Loma Bonita en León, Capra combina tres cosas difíciles de reemplazar: variedad de equipo, una mensualidad accesible y un ambiente que sus propios usuarios recomiendan.</p>
+      <a href="#ubicacion" class="text-link">Ver ubicación y horarios →</a>
+    </div>
+  </div>
+</section>
+
 <section class="atmosphere" id="ambiente">
   <div class="wrap">
     <div class="atmo-copy reveal">
-      <h2>Entrenar bien se siente mejor cuando estás a gusto.</h2>
-      <p>El equipo importa, pero también cómo se siente entrenar aquí. Las reseñas destacan el ambiente, el respeto, la música y la atención.</p>
+      <h2>Un lugar al que da gusto volver.</h2>
+      <p>El equipo importa. El ambiente también. Quienes entrenan en Capra destacan el respeto, la música, la atención y una comunidad agradable.</p>
       <div class="atmo-points">
         <span>Buen ambiente</span>
         <span>Respeto</span>
@@ -337,7 +385,7 @@ h2{font-size:clamp(42px,5vw,72px);margin-bottom:0}
   <div class="wrap">
     <div class="reviews-head">
       <div>
-        <h2 class="reveal">Buenas reseñas.<br>Mejor ambiente.</h2>
+        <h2 class="reveal">Lo que más se repite:<br>equipo, ambiente y atención.</h2>
       </div>
       <div class="big-rating reveal">
         <div class="google-rating-line">
@@ -370,8 +418,8 @@ h2{font-size:clamp(42px,5vw,72px);margin-bottom:0}
   <div class="wrap">
     <div class="visit-head reveal">
       <div>
-        <h2>Ven a entrenar cuando te quede mejor.</h2>
-        <p>Pregunta por la mensualidad de $350 y por la próxima promoción de $300 directamente por WhatsApp.</p>
+        <h2>Capra Gym en Loma Bonita, León.</h2>
+        <p>Consulta la mensualidad de $350, la próxima promoción de $300 y cualquier duda antes de tu primera visita.</p>
       </div>
       <div class="visit-brand">
         <img src="data:image/png;base64,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" alt="Capra Gym">
@@ -397,8 +445,8 @@ h2{font-size:clamp(42px,5vw,72px);margin-bottom:0}
     <div class="visit-grid">
       <div class="visit-actions reveal">
         <div>
-          <h3>¿Quieres probar Capra?</h3>
-          <p>Escríbenos y pregunta por precios, promoción y cualquier duda antes de ir.</p>
+          <h3>¿Buscas un gym cerca?</h3>
+          <p>Escríbenos, revisa la ubicación y ven a conocer el ambiente antes de decidir.</p>
         </div>
         <div class="hero-actions">
           <a class="btn btn-red" href="https://wa.me/524779137130?text=Hola%20Capra%20Gym,%20quiero%20informes%20sobre%20la%20mensualidad%20y%20la%20próxima%20promoción" target="_blank" rel="noopener">Escribir por WhatsApp</a>
