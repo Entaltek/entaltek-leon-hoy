@@ -121,27 +121,32 @@ h2{font-size:clamp(42px,5vw,72px);margin-bottom:0}
 .equip-note{margin-top:18px;color:#73716c;font-size:11px}
 
 
-.catalog{padding:112px 0;background:#f4f1ea;color:#111;border-top:1px solid #d2cec5}
-.catalog-head{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:end;margin-bottom:42px}
+.catalog{padding:112px 0;background:#f4f1ea;color:#111;border-top:1px solid #d8d2c8}
+.catalog-head{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:end;margin-bottom:42px}
 .catalog-head h2{font-size:clamp(44px,5vw,72px);margin:0}
-.catalog-head p{margin:0;color:#5e5952;font-size:17px;max-width:590px}
-.catalog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.merch-card{border:1px solid #d4d0c7;background:#fff;overflow:hidden;display:flex;flex-direction:column;min-width:0}
-.merch-image{aspect-ratio:4/5;background:#e9e7e1;overflow:hidden}
-.merch-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s ease}
-.merch-card:hover .merch-image img{transform:scale(1.025)}
-.merch-info{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}
-.merch-info h3{margin:0 0 7px;font-size:23px}
-.merch-info>p{margin:0;color:#68635c;font-size:14px;min-height:42px}
-.product-specs{margin:22px 0 0;border-top:1px solid #e6e2da}
-.product-specs div{display:grid;grid-template-columns:82px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid #ece8e0;font-size:12px}
-.product-specs dt{color:#8d877e;text-transform:uppercase;letter-spacing:.11em;font-weight:800}
-.product-specs dd{margin:0;color:#26231f;font-weight:600}
-.merch-action{margin-top:auto;padding-top:20px}
-.merch-action a{display:inline-flex;font-size:12px;font-weight:800;border-bottom:1px solid #777;padding-bottom:3px}
-.catalog-note{margin:16px 0 0;color:#817b72;font-size:11px}
-.catalog-cta{margin-top:22px;padding:28px 30px;background:#111;color:#f7f5ef;display:flex;align-items:center;justify-content:space-between;gap:30px}
-.catalog-cta h3{margin:0 0 6px;font-size:25px}
+.catalog-head p{margin:0;color:#605b54;font-size:17px;max-width:560px}
+.catalog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.merch-card{background:#fff;border:1px solid #ddd7cd;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;min-height:100%;box-shadow:0 10px 24px rgba(0,0,0,.04);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.merch-card:hover{transform:translateY(-4px);border-color:#cfc8bc;box-shadow:0 18px 34px rgba(0,0,0,.08)}
+.merch-visual{position:relative;background:linear-gradient(180deg,#f1ece4 0%,#e8e2d8 100%);padding:18px;min-height:360px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.merch-visual img{width:100%;height:320px;object-fit:contain;object-position:center;display:block;transition:transform .35s ease}
+.merch-card:hover .merch-visual img{transform:scale(1.025)}
+.merch-badge{position:absolute;top:16px;left:16px;z-index:2;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.92);border:1px solid #d7d1c7;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#222}
+.merch-body{display:flex;flex-direction:column;gap:18px;padding:22px 22px 24px;flex:1}
+.merch-top h3{margin:0 0 8px;font-size:24px;line-height:1.05}
+.merch-top p{margin:0;color:#666159;font-size:14px;line-height:1.5}
+.merch-specs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.spec{background:#faf8f4;border:1px solid #e4ddd2;border-radius:12px;padding:12px 12px 10px}
+.spec-label{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#8a847b;margin-bottom:6px;font-weight:700}
+.spec strong{font-size:13px;color:#1c1c1c;line-height:1.25}
+.merch-bottom{margin-top:auto;display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding-top:16px;border-top:1px solid #ebe5dc}
+.price-box{display:flex;flex-direction:column;gap:4px}
+.price-label{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#8a847b;font-weight:700}
+.price-value{font:600 26px/1.05 Oswald,Inter,sans-serif;color:#111}
+.merch-btn{min-width:132px;justify-content:center;border-radius:10px}
+.catalog-note{margin:14px 0 0;color:#817b72;font-size:11px}
+.catalog-cta{margin-top:22px;padding:30px 32px;background:#111;color:#f7f5ef;display:flex;align-items:center;justify-content:space-between;gap:30px;border-radius:16px}
+.catalog-cta h3{margin:0 0 6px;font-size:26px}
 .catalog-cta p{margin:0;color:#aaa7a0;font-size:14px}
 .local-position{padding:82px 0;background:#f4f1ea;color:#111;border-top:1px solid #d2cec5}
 .local-position-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:start}
@@ -206,7 +211,7 @@ h2{font-size:clamp(42px,5vw,72px);margin-bottom:0}
   .why-head,.equip-head,.reviews-head,.visit-grid,.visit-head,.local-position-grid,.catalog-head{grid-template-columns:1fr}
   .benefits{grid-template-columns:1fr}.benefit{border-right:0;border-bottom:1px solid #cbc7bd;padding:26px 0;margin:0}
   .equip-grid{grid-template-columns:1fr;grid-template-rows:420px 300px 300px}.eq1{grid-row:auto}
-  .equip-strip{grid-template-columns:1fr 1fr}.catalog-grid{grid-template-columns:1fr 1fr}.catalog-cta{align-items:flex-start;flex-direction:column}
+  .equip-strip{grid-template-columns:1fr 1fr}.catalog-grid{grid-template-columns:1fr 1fr}.catalog-head{gap:24px}.catalog-cta{align-items:flex-start;flex-direction:column}
   .big-rating{text-align:left}.google-rating-line{justify-content:flex-start}.review{grid-template-columns:1fr;gap:12px}.review footer{text-align:left}
 }
 @media(max-width:600px){
@@ -217,7 +222,7 @@ h2{font-size:clamp(42px,5vw,72px);margin-bottom:0}
   .offer-main,.offer-next{align-items:flex-end}.offer-price{font-size:48px}
   .why,.equipment,.catalog,.reviews,.visit{padding:82px 0}
   h2{font-size:43px}
-  .equip-grid{grid-template-rows:360px 270px 270px}.equip-strip{grid-template-columns:1fr}.catalog-grid{grid-template-columns:1fr}.merch-image{aspect-ratio:1/1}.merch-info>p{min-height:0}.catalog-grid{grid-template-columns:1fr}.merch-visual{height:420px}
+  .equip-grid{grid-template-rows:360px 270px 270px}.equip-strip{grid-template-columns:1fr}.catalog-grid{grid-template-columns:1fr}.merch-visual{min-height:320px}.merch-visual img{height:280px}.merch-specs{grid-template-columns:1fr}.merch-bottom{flex-direction:column;align-items:stretch}.merch-btn{width:100%}.catalog-cta{border-radius:14px}
   .atmosphere{min-height:520px}.atmo-copy h2{font-size:50px}.atmo-points{display:grid;grid-template-columns:1fr 1fr}
   .visit-info{grid-template-columns:1fr}.visit-info>div{border-right:0;border-bottom:1px solid #303030;margin-right:0;padding-right:0}.visit-info>div:last-child{border-bottom:0}.visit-brand{display:none}
   .footer-inner{flex-wrap:wrap;padding:24px 0}.footer-spacer{margin-left:0}
@@ -382,7 +387,7 @@ h2{font-size:clamp(42px,5vw,72px);margin-bottom:0}
   <div class="wrap">
     <div class="catalog-head">
       <h2 class="reveal">Playeras Capra.</h2>
-      <p class="reveal">Para entrenar y llevar la marca fuera del gym. Consulta existencias y talla antes de tu compra.</p>
+      <p class="reveal">Tres combinaciones para entrenar y llevar la marca fuera del gym. Consulta precio, talla y disponibilidad directamente con Capra.</p>
     </div>
 
     <div class="catalog-grid">
@@ -391,14 +396,22 @@ h2{font-size:clamp(42px,5vw,72px);margin-bottom:0}
           <span class="merch-badge">Capra Gym</span>
           <img src="assets/playera-gris-logo-blanco.webp" width="420" height="525" loading="lazy" alt="Playera gris Capra Gym con logo blanco">
         </div>
-        <div class="merch-info">
-          <h3>Playera gris</h3>
-          <p>Gris con logo blanco. Limpia, neutra y fácil de combinar.</p>
-          <div class="merch-price">Precio por consultar</div>
-          <div class="merch-options"><span>Gris</span><span>Logo blanco</span><span>Talla por consultar</span></div>
-          <div class="merch-meta">
-            <span>Disponibilidad en gym</span>
-            <a href="https://wa.me/524779137130?text=Hola%20Capra%20Gym,%20quiero%20saber%20precio,%20tallas%20y%20disponibilidad%20de%20la%20playera%20gris" target="_blank" rel="noopener">Consultar →</a>
+        <div class="merch-body">
+          <div class="merch-top">
+            <h3>Playera gris</h3>
+            <p>Una opción limpia y versátil para entrenar o usar fuera del gym.</p>
+          </div>
+          <div class="merch-specs">
+            <div class="spec"><span class="spec-label">Color</span><strong>Gris</strong></div>
+            <div class="spec"><span class="spec-label">Logo</span><strong>Blanco</strong></div>
+            <div class="spec"><span class="spec-label">Talla</span><strong>Por consultar</strong></div>
+          </div>
+          <div class="merch-bottom">
+            <div class="price-box">
+              <span class="price-label">Precio</span>
+              <strong class="price-value">Por consultar</strong>
+            </div>
+            <a class="btn btn-red merch-btn" href="https://wa.me/524779137130?text=Hola%20Capra%20Gym,%20quiero%20saber%20precio,%20tallas%20y%20disponibilidad%20de%20la%20playera%20gris" target="_blank" rel="noopener">Consultar</a>
           </div>
         </div>
       </article>
@@ -408,14 +421,22 @@ h2{font-size:clamp(42px,5vw,72px);margin-bottom:0}
           <span class="merch-badge">Capra Gym</span>
           <img src="assets/playera-negra-logo-rojo.webp" width="420" height="525" loading="lazy" alt="Playera negra Capra Gym con logo rojo">
         </div>
-        <div class="merch-info">
-          <h3>Playera negra</h3>
-          <p>Negra con logo rojo. La combinación con mayor contraste de la colección.</p>
-          <div class="merch-price">Precio por consultar</div>
-          <div class="merch-options"><span>Negro</span><span>Logo rojo</span><span>Talla por consultar</span></div>
-          <div class="merch-meta">
-            <span>Disponibilidad en gym</span>
-            <a href="https://wa.me/524779137130?text=Hola%20Capra%20Gym,%20quiero%20saber%20precio,%20tallas%20y%20disponibilidad%20de%20la%20playera%20negra" target="_blank" rel="noopener">Consultar →</a>
+        <div class="merch-body">
+          <div class="merch-top">
+            <h3>Playera negra</h3>
+            <p>La combinación con mayor contraste y carácter de la colección Capra.</p>
+          </div>
+          <div class="merch-specs">
+            <div class="spec"><span class="spec-label">Color</span><strong>Negro</strong></div>
+            <div class="spec"><span class="spec-label">Logo</span><strong>Rojo</strong></div>
+            <div class="spec"><span class="spec-label">Talla</span><strong>Por consultar</strong></div>
+          </div>
+          <div class="merch-bottom">
+            <div class="price-box">
+              <span class="price-label">Precio</span>
+              <strong class="price-value">Por consultar</strong>
+            </div>
+            <a class="btn btn-red merch-btn" href="https://wa.me/524779137130?text=Hola%20Capra%20Gym,%20quiero%20saber%20precio,%20tallas%20y%20disponibilidad%20de%20la%20playera%20negra" target="_blank" rel="noopener">Consultar</a>
           </div>
         </div>
       </article>
@@ -425,18 +446,28 @@ h2{font-size:clamp(42px,5vw,72px);margin-bottom:0}
           <span class="merch-badge">Capra Gym</span>
           <img src="assets/playera-verde-logo-negro.webp" width="420" height="525" loading="lazy" alt="Playera verde militar Capra Gym con logo negro">
         </div>
-        <div class="merch-info">
-          <h3>Playera verde militar</h3>
-          <p>Verde militar con logo negro. Sobria, distinta y con una identidad más utilitaria.</p>
-          <div class="merch-price">Precio por consultar</div>
-          <div class="merch-options"><span>Verde militar</span><span>Logo negro</span><span>Talla por consultar</span></div>
-          <div class="merch-meta">
-            <span>Disponibilidad en gym</span>
-            <a href="https://wa.me/524779137130?text=Hola%20Capra%20Gym,%20quiero%20saber%20precio,%20tallas%20y%20disponibilidad%20de%20la%20playera%20verde%20militar" target="_blank" rel="noopener">Consultar →</a>
+        <div class="merch-body">
+          <div class="merch-top">
+            <h3>Playera verde militar</h3>
+            <p>Una variante sobria y distinta, con una identidad más utilitaria.</p>
+          </div>
+          <div class="merch-specs">
+            <div class="spec"><span class="spec-label">Color</span><strong>Verde militar</strong></div>
+            <div class="spec"><span class="spec-label">Logo</span><strong>Negro</strong></div>
+            <div class="spec"><span class="spec-label">Talla</span><strong>Por consultar</strong></div>
+          </div>
+          <div class="merch-bottom">
+            <div class="price-box">
+              <span class="price-label">Precio</span>
+              <strong class="price-value">Por consultar</strong>
+            </div>
+            <a class="btn btn-red merch-btn" href="https://wa.me/524779137130?text=Hola%20Capra%20Gym,%20quiero%20saber%20precio,%20tallas%20y%20disponibilidad%20de%20la%20playera%20verde%20militar" target="_blank" rel="noopener">Consultar</a>
           </div>
         </div>
       </article>
     </div>
+
+    <p class="catalog-note">Las imágenes son una representación visual de las combinaciones de color del catálogo.</p>
 
     <div class="catalog-cta reveal">
       <div>
